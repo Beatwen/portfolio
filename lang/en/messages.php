@@ -1,7 +1,7 @@
 <?php
 
 return [
-    "welcome" => "Hiii,",
+    "welcome" => "Hiiii,",
     "welcome2" => "My name is Chris.",
     "work" => "Aspiring Full Stack Developer",
     "description" => "I'm a <b>passionately curious</b> final-year student, deeply engaged in the exciting realm of software and web development.",
