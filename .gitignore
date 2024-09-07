@@ -20,3 +20,7 @@ yarn-error.log
 /.vscode
 /public/storage
 /public/storage
+/storage/*
+/public/storage
+/storage/framework/views
+/storage/logs/laravel.log
