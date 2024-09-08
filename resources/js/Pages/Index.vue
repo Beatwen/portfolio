@@ -306,8 +306,8 @@ console.log("%cBe happy ❤️", "font-size: 30px; color: red; font-weight: bold
 .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 40px;
+    height: 17px;
     margin-left: 10px; /* Adds some spacing between the label and the switch */
 }
 
@@ -327,16 +327,16 @@ console.log("%cBe happy ❤️", "font-size: 30px; color: red; font-weight: bold
     background-color: #0f60a3;
 
     transition: 0.4s;
-    border-radius: 34px;
+    border-radius: 17px;
 }
 
 .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
+    height: 13px;
+    width: 13px;
     left: 4px;
-    bottom: 4px;
+    bottom: 2px;
     background-color: rgb(148 163 184);
     transition: 0.4s;
     border-radius: 50%;
@@ -351,6 +351,6 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(26px);
+    transform: translateX(19px);
 }
 </style>
