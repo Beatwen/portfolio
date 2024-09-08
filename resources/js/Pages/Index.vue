@@ -48,7 +48,7 @@ console.log("%cBe happy ❤️", "font-size: 30px; color: red; font-weight: bold
                 <span>EN</span>
             </div>
             <div
-                class="flex flex-col items-center p-8 lg:py-4 lg:pl-12"
+                class="flex flex-col items-center p-8 lg:py-4"
             >
                 <h1 class="text-4xl font-bold sm:text-5xl pb-4 ">
                     {{ $page.props.messages.welcome }} <br />
