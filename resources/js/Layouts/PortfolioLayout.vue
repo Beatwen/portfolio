@@ -22,7 +22,7 @@ const showingNavigationDropdown = ref(false);
         >
             <!-- Page Heading -->
             <header
-                class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-2/5 lg:flex-col lg:justify-between"
+                class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-2/5 lg:flex-col lg:justify-between overflow-auto"
                 v-if="$slots.header"
             >
                 <slot name="header" />
@@ -34,3 +34,31 @@ const showingNavigationDropdown = ref(false);
         </div>
     </div>
 </template>
+
+
+<style scoped>
+/* For WebKit browsers (Chrome, Safari, etc.) */
+header::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
+}
+
+header::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2); /* Light color for the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners */
+}
+
+header::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.4); /* Slightly darker on hover */
+}
+
+header::-webkit-scrollbar-track {
+    background: transparent; /* Transparent background for the scrollbar track */
+}
+
+/* For Firefox */
+header {
+    scrollbar-width: thin; /* Thinner scrollbar */
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent; /* Thumb color and track color */
+}
+
+</style>

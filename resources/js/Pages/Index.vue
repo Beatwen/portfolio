@@ -35,7 +35,7 @@ console.log("%cBe happy ❤️", "font-size: 30px; color: red; font-weight: bold
 <template>
     <PortfolioLayout>
         <template v-slot:header>
-            <div class="language-switcher p-6">
+            <div class="language-switcher pt-4 pl-4">
                 <span>FR</span>
                 <label class="switch">
                     <input
@@ -48,9 +48,9 @@ console.log("%cBe happy ❤️", "font-size: 30px; color: red; font-weight: bold
                 <span>EN</span>
             </div>
             <div
-                class="flex flex-col items-center p-8 lg:pt-8 lg:py-12 lg:pl-12"
+                class="flex flex-col items-center p-8 lg:pt-8 lg:py-4 lg:pl-12"
             >
-                <h1 class="text-4xl font-bold sm:text-5xl pb-4 text-justify">
+                <h1 class="text-4xl font-bold sm:text-5xl pb-4 ">
                     {{ $page.props.messages.welcome }} <br />
                     {{ $page.props.messages.welcome2 }}
                     <!-- Display the current locale -->
@@ -65,7 +65,7 @@ console.log("%cBe happy ❤️", "font-size: 30px; color: red; font-weight: bold
                     {{ $page.props.messages.work }}
                 </h2>
                 <p
-                    class="mt-4 max-w-sm leading-normal text-justify"
+                    class="mt-4 max-w-sm leading-normal text-center"
                     v-html="$page.props.messages.description"
                 ></p>
                 <p
@@ -114,7 +114,7 @@ console.log("%cBe happy ❤️", "font-size: 30px; color: red; font-weight: bold
             </div>
             <!-- Social media icons -->
             <ul
-                class="flex flex-row mt-auto w-full justify-center"
+                class="flex flex-row mt-auto pb-2 w-full justify-center"
                 aria-label="Social media"
             >
                 <li class="pr-4">
@@ -211,7 +211,7 @@ console.log("%cBe happy ❤️", "font-size: 30px; color: red; font-weight: bold
         >
             {{ $page.props.messages.about }}
         </h1>
-        <p class="text-justify">
+        <p class="">
             {{ $page.props.messages.aboutme }}
         </p>
 
@@ -252,7 +252,7 @@ console.log("%cBe happy ❤️", "font-size: 30px; color: red; font-weight: bold
                             <div
                                 class="flex justify-start items-center space-x-4"
                             >
-                                <h3 class="mt-2 text-justify">
+                                <h3 class="mt-2 ">
                                     {{ Trad(project.description) }}
                                 </h3>
                             </div>
@@ -285,7 +285,7 @@ console.log("%cBe happy ❤️", "font-size: 30px; color: red; font-weight: bold
                         </h2>
 
                         <div class="flex justify-end items-center space-x-4">
-                            <h3 class="mt-2 text-justify">
+                            <h3 class="mt-2 ">
                                 {{ Trad(experience.description) }}
                             </h3>
                         </div>
