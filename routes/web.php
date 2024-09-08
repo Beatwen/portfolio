@@ -11,6 +11,7 @@ use App\Http\Controllers\ProjectController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\App;
 use App\Http\Controllers\LocaleController;
+use Illuminate\Container\Attributes\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Log;
@@ -23,9 +24,11 @@ Route::get('/about', [AboutController::class, 'about'])->name('about');
 Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
 
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
+
 Route::group(['prefix' => 'projects'], function() {
     Route::resource('/projects', ProjectController::class)->middleware(['auth', 'verified']);
 });
+
 Route::group(['prefix' => 'experiences'], function() {
     Route::resource('/experiences', ExperienceController::class)->middleware(['auth', 'verified']);
 });
@@ -36,12 +39,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
 Route::get('/lang',[LanguageController::class , 'change'])->name('user.lang');
-
-
-
-
-
 
 require __DIR__.'/auth.php';

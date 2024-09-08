@@ -9,6 +9,7 @@ const props = defineProps({
 });
 
 const form = useForm({
+    id: props.project.id,
     name_en: props.project.name_en,
     name_fr: props.project.name_fr,
     brief_description_en: props.project.brief_description_en,
@@ -22,16 +23,16 @@ const form = useForm({
 });
 
 const successMessage = ref('');
-const submitForm = async () => {
-    await form.put(route('projects.update', props.project), {
+function submitForm() {
+    console.log("submitForm");
+    form.post(route('projects.update', props.project), {
+        preserveScroll: true,
         onSuccess: () => {
-            successMessage.value = 'Projet enregistré avec succès';
+            successMessage.value = 'Project updated successfully';
         },
-        onError: () => {
-            successMessage.value = 'Projet non enregistré, veuillez réessayer';
-        }
     });
-};
+}
+console.log(props.project);
 
 </script>
 
@@ -42,7 +43,7 @@ const submitForm = async () => {
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">Edit a project</h2>
 
-            <form @submit.prevent="submitForm" class="w-full max-w-4xl px-4 py-3 mt-4 bg-white shadow-md rounded-lg">
+            <form @submit.prevent="form.put(route('projects.update', props.project.id))" class="w-full max-w-4xl px-4 py-3 mt-4 bg-white shadow-md rounded-lg">
 
                 <div class="flex flex-wrap -mx-3 mb-6">
                     <div class="w-full px-3 mb-6 md:mb-0">
@@ -107,8 +108,13 @@ const submitForm = async () => {
                             {{ form.errors.project_url }}
                         </p>
 
-                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Edit project</button>
-                        <p class="mt-4 text-sm text-green-600" v-if="successMessage">{{ successMessage }}</p>
+                        <button
+                                type="submit"
+                                :disabled="form.processing"
+                                class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+                            >
+                                Modifier
+                            </button>                       <p class="mt-4 text-sm text-green-600" v-if="successMessage">{{ successMessage }}</p>
                     </div>
                 </div>
             </form>

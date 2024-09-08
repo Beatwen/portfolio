@@ -4,7 +4,7 @@ return [
     "welcome" => "Hi,",
     "welcome2" => "My name is Chris.",
     "work" => "Aspiring Full Stack Developer",
-    "description" => "I'm a <b>passionately curious</b> final-year student, deeply engaged in the exciting realm of software and web development.",
+    "description" => "Passionate about technology and software development, and after spending 10 years as a sound engineer on tour and at various events around the world, I am now pursuing a new chapter in my career. I am currently a 3rd-year computer development student at IFOSUP. Today, I work at Inytium, an audiovisual integration company, where I am a project manager. My journey reflects my constant desire to learn and innovate in order to offer optimized user experiences.",
     "happenings" => "Oh, and I'm searching for an internship!",
     "about" => "A bit about me",
     "projects" => "My Projects",

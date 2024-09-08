@@ -54,6 +54,7 @@ class ExperienceController extends Controller
     {
         return Inertia::render('Experiences/Edit', [
             'experience' => [
+                'id' => $experience->id,
                 'name_en' => $experience->getTranslation('name', 'en'),
                 'name_fr' => $experience->getTranslation('name', 'fr'),
                 'brief_description_en' => $experience->getTranslation('brief_description', 'en'),

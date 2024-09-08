@@ -4,7 +4,7 @@ return [
     "welcome" => "Salut !",
     "welcome2" => "Moi, c'est Chris.",
     "work" => "Étudiant en développement informatique",
-    "description" => "Je suis un <b>étudiant curieux et passionné</b> en dernière année, plongé dans l'univers excitant du développement logiciel et web.",
+    "description" => "Passionné par la technologie et le développement informatique et après avoir passé 10 ans en tant qu’ingénieur du son en tournée et sur divers événements un peu partout dans le monde, je poursuis actuellement un nouveau chapitre de ma carrière. Je suis désormais étudiant en développement informatique en 3e année à l’IFOSUP. Aujourd'hui, je travaille chez Inytium, une société d'intégration audiovisuelle, où je suis project manager. Mon parcours témoigne de mon désir constant d'apprendre, d'innover pour proposer des expériences utilisateurs optimisées.",
     "happenings" => "Au fait, je cherche un stage en ce moment !",
     "about" => "À propos de moi",
     "projects" => "Mes projets",

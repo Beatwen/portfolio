@@ -63,6 +63,7 @@ class ProjectController extends Controller
     {
         return Inertia::render('Projects/Edit', [
             'project' => [
+                'id' => $project->id,
                 'name_en' => $project->getTranslation('name', 'en'),
                 'name_fr' => $project->getTranslation('name', 'fr'),
                 'brief_description_en' => $project->getTranslation('brief_description', 'en'),
