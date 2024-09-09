@@ -252,6 +252,9 @@ console.log("%cBe happy ❤️", "font-size: 30px; color: red; font-weight: bold
                                 class="text-xs text-slate-500 hover:text-slate-200"
                                 >View on GitHub</a
                             >
+                            <p class="text-xs text-slate-500">
+                                {{ Trad(project.brief_description) }}
+                            </p>
                         </div>
                         <div class="w-4/5">
                             <h2 class="font-semibold text-xl leading-tight">
@@ -343,7 +346,7 @@ console.log("%cBe happy ❤️", "font-size: 30px; color: red; font-weight: bold
     content: "";
     height: 13px;
     width: 13px;
-    left: 4px;
+    left: 3px;
     bottom: 2px;
     background-color: rgb(148 163 184);
     transition: 0.4s;
@@ -363,6 +366,6 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(19px);
+    transform: translateX(21px);
 }
 </style>
