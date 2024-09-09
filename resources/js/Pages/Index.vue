@@ -207,10 +207,18 @@ console.log("%cBe happy ❤️", "font-size: 30px; color: red; font-weight: bold
         </template>
         <h1
             id="about"
-            class="mt-4 text-lg font-medium tracking-tight sm:text-xl mb-4"
+            class="flex flex-col mt-4 text-lg font-medium tracking-tight sm:text-xl mb-4"
         >
             {{ $page.props.messages.about }}
+            <a
+
+            href="/storage/Christophe Bouserez.pdf"
+            target="_blank"
+            class="text-sm text-slate-500 hover:text-slate-200 cvLink"
+            > {{ $page.props.messages.cvLink }}</a
+            >
         </h1>
+
         <p class="">
             {{ $page.props.messages.aboutme }}
         </p>
@@ -344,6 +352,10 @@ console.log("%cBe happy ❤️", "font-size: 30px; color: red; font-weight: bold
 
 input:checked + .slider {
     background-color: #b14a00;
+}
+
+.cvLink {
+    color: #0f60a3;
 }
 
 input:focus + .slider {
