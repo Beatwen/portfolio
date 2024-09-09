@@ -252,9 +252,9 @@ console.log("%cBe happy ❤️", "font-size: 30px; color: red; font-weight: bold
                                 class="text-xs text-slate-500 hover:text-slate-200"
                                 ><i class="ri-external-link-line"></i>  View on GitHub</a
                             >
-                            <p class="text-xs text-slate-400">
+                            <p class="text-xs text-slate-400 pt-1">
 
-                                {{ project.brief_description }}
+                                {{ Trad(project.brief_description) }}
                             </p>
                         </div>
                         <div class="w-4/5">
