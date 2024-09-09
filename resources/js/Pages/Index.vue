@@ -250,10 +250,11 @@ console.log("%cBe happy ❤️", "font-size: 30px; color: red; font-weight: bold
                                 :href="project.github_url"
                                 target="_blank"
                                 class="text-xs text-slate-500 hover:text-slate-200"
-                                >View on GitHub</a
+                                ><i class="ri-external-link-line"></i>  View on GitHub</a
                             >
-                            <p class="text-xs text-slate-500">
-                                {{ Trad(project.brief_description) }}
+                            <p class="text-xs text-slate-400">
+
+                                {{ project.brief_description }}
                             </p>
                         </div>
                         <div class="w-4/5">
